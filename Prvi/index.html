@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- svaki dokument mora da ima title unutar heada, to je pravilo, i ruzno izgleda new document
+	koji pise unutar taba ako se ovo izostavi-->
+	<title>Veb kolacic</title>
+	<!-- Trebamo da pisemo nas CSS odvojeno od HTMLa iz razloga preglednosti uvek. Da bismo 
+	dodali taj odvojeni fajl da utice na nas html, ubacujemo ga preko link taga koji ima tri svojstva, rel - relationship tj odnos sa nasim fajlom, u ovom slucaju stylesheet sto oznacava da ce on "ulepsavati" ili stilizovati nas fajl, type - tip koda koji ocekuje i kako da ga prepozna i href koji predstavlja hyper referencu tj adresu (hyperlink je link koji vodi na neku stranicu)-->
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<!--Uvek trebamo sto bolje da struktuiramo nasu stranicu, uvek je dobro imati okvir unutar kojeg cemo sve ubacivati da nam elementi ne bi bezali po ekranu -->
+	<div id="okvir">
+		<!--Svaku celinu trebamo da uokvirimo i izloujemo, to smo uradili ovde i sa svakom celinom u fajlu -->
+		<div id="zaglavlje">
+<!--			<img src="kolacic.gif"> mozemo i ovako da dodamo kolacic, samo bismo morali
+										da mu odredimo sirinu i visinu</data> -->
+			<h1>Veb kolačić</h1>		
+		</div>
+		<!-- sav ovaj kod se sam prilicno dobro objasnjava, samo smo prelazili osnovne funkcionalnosti, underline, span i slicno-->
+		<div id="centar" style="font-size: 18px;">
+			<p>Kolačići (engl. cookies) su mehaniyam čuvanja podataka veb aplikacija na klijentskoj mašini. Na primer, mogu se čuvati korisničko ime i šifra za pristup veb aplikaciji, odabrane preferencije kao što su veličine slova, teme sajta i slično. U zavisnosti od tipa kolačića koji se koristi, ovi podaci se mogu slati pri svakom narednom korišćenju aplikacije.</p>
+			<p>Sa kolačićima se može raditi kroz JavaScript jeyik. Na primer, kod:</p>
+			<code>document.cookies="korisnik= Pera Peric: expires= Thu, 1 Dec 2016 12:00:00 UTC":</code>
+			<p>postavlja kolačić sa imenom korisnik koji se može čuvati na klijentskoj <span id="underline">mašini do 1.</span> decembra 2016. godine.</p>
+			<p>Kolačići mogu sadržati važne informacije. <b>Zato pregledači podrazumevano sprovode strogu politiku i ne</b> dele kolačiće</p>
+		</div>
+		<div id="podnozje">
+			<a>
+				<div id="zeleno" style="font-size: 18px;">
+					<h3>Zakonske regulative</h3>
+					<p>U maju 2012. godine EU je propisala zakon po kome veb sajtovi koji koriste kolacice moraju ekplicitno da obaveste korisnika i traze njegovu saglasnost.</p>
+					<!--BITNO - procitati razlike izmedju display vrednosti, ovde manipulisemo linijski element da se pretvori u blokovski da bismo mogli da na njega primenimo margine i pozicioniramo na sredinu-->
+					<img src="zakon.jpg" style="display: inline-block; margin: 20px 0px 0px 60px;">
+				</div>
+			</a>
+			<!-- table tag se sadrzi iz table row i table data tagova i mozemo ih uredjati i spajati preko rowspan i colspan svojstava *izvezbati ovo, mozda nekada bude korisno*-->
+			<table id="narandzast">
+				<tr>
+				<!--BITNO - Ovde smo udarili u zid rowspan atribuda i colspan atribuda, moja greska je bila sledeca: ako se doda rowspan, to znaci da se JEDAN element prostire VISE REDOVA, sto znaci da ekvivalent u drugom redu za taj element NE TREBAMO DA NAVODIMO, isto vazi i za colspan, ostavicu pod komentarom sta je bilo pre promene i sta je resenje zapravo -->
+					<!-- <td style="text-align: center;">Svojstva kolacica:</td>
+					<td style="background-color: white;  color: black; height: 150px; border: 1px dashed orange;">
+						<p> Vise informacije se moze procitati na strani <a href="www.wikipedia.com">Vikipedije</a>
+						</p>
+					</td> -->
+
+					<!--Ovde je u redu koristiti CSS unutar samo HTMLa jer menjamo specificne elemente za koje ne bi bilo prakticno praviti dodatne idjeve ili klase, vecinu ostalog koda treba pisati u odvojenom fajlu -->
+					<!--BITNO - Ako napisemo CSS vrednosti u .css fajlu koji linkujemo i onda dodamo neke css vrednosti direktno u nas kod, ONO STO JE U SAMOM HTMLU IMA PREDNOST IAKO POSTOJI DRUGA VERZIJA KODA KOJA SE PRIMENJUJE, probati na nekom primeru i videti sam -->
+					<td style= "text-align: center; width: 50% " rowspan="2">
+						<p>Svojstva kolacica:</p>
+						<ul style="text-align: left">
+							<li>maksimalna velicina 4kh</li>
+							<li>mogu se samo citati</li>
+							<li>mogu biti trajni ili privremeni</li>
+						</ul>
+					</td>
+					<td style="text-align: center; color: black; background-color: white; border: 1px dashed orange">
+						<p> Vise informacije se moze procitati na strani <a href="www.wikipedia.com">Vikipedije</a>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 50px;"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+
+</body>
+</html>
