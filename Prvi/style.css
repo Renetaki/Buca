@@ -1,0 +1,115 @@
+/*Dodajemo nov font koji mora (zbog ovakvo formiranog URLa) da se nalazi u istom folderu
+kao i nas css fajl koji ga poziva, font-family svostvom mu dajemo nase odredjeno ime,
+dok src pokazuje na lokaciju na kojoj se nalazi*/
+@font-face{
+	font-family: mojfont;
+	src: url('amatic.ttf');
+}
+/*Sve ispod su samo vrednosti CSSa koje treba prouciti, treba imati vrednosti i 
+svojstva na umu, preporucujemo sublime text iako ne znas jos uvek sve iste i zeleo bi sam
+da krenes da ih kucas i radis, ako sublime recimo daje opcije koje ne bi pale na pamet i takodje
+produbljuje znanje o nekima za koje se nikada nije ni culo
+
+Bitno je takodje znati engleski i sve vezano jer nekada se moze iz imena samog svojstva
+(svostvo je zvanicno ime za stvari kao npr width/height/color... dok je za za njihove vrednosti
+value, a npr #okvir se zove selektor) sta to svojstvo radi i iz toga smisliti novi nacin da se neki
+problem resi*/
+
+/*BITNO - Nauciti detaljno mogucnosti i samo position svojstvo, jako se puno koristi, i vrlo je bitno
+pri pozicioniranju elemenata na stranici, takodje znaci sta je float i kako se elementi
+slazu jedan iza drugog/posle drugog preko float svojstva*/
+
+/*Forica koriscena sa marginom u okviru namesta bilo koji block element na sredinu ekrana, auto
+se odnosi na vrednosti leve i desne margine gde auto znaci da te vrednosti sam browser stavi
+da budu podjednake*/
+
+/*Bitna stvar je koristiti sto vise klasa(koje nismo danas jer nismo imali primer
+puno elemenata koji trebaju da imaju ista svojstva) i identifikatora jer olaksavaju rad
+i daju nam mogucnost da ne moramo da uopstavamo stvari. Mozda zelimo u trenutku kada pisemo
+da SVI p elementi (radi primera) budu zeleni, mozda zelimo da neki ostali ne budu, samim tim 
+trebamo koristiti klasu a ne sve elemente ofarbati u zeleno pa posle menjati one koji ne trebaju*/
+#okvir{
+	width: 1000px;
+	height: 900px;
+	position: static;
+	margin: 0px auto;
+	border-right: 1px solid black;
+}
+#zaglavlje{
+	width: 400px;
+	height: 100px;
+	border-bottom: 2px dashed orange;
+	background-image: url('kolacic.gif');
+	background-size: 100px 100px;
+	background-repeat: no-repeat;
+	margin-bottom: 50px;
+}
+h1{
+	text-align: right;
+	font-family: mojfont;
+	font-size: 65px;
+	color:orange;
+	padding-top: 15px;
+
+}
+#centar {
+	width: 850px;
+	height: 350px;
+	position: relative;
+	background-color: #5f9ea0;
+	margin-left: 135px;
+	padding-top: 30px;
+	padding-left: 15px;
+	color: white;
+	margin-bottom: 50px;
+}
+#underline {
+	text-decoration: underline;
+}
+#podnozje {
+	position: relative;
+	margin-left: 135px;
+	height: 300px;
+	width: 850px;
+
+}
+#zeleno {
+	position: absolute;
+	
+	height: 300px;
+	width: 300px;
+	background-color: green;
+	border-radius: 0px 50px 50px 50px;
+	padding-top: 20px;
+	padding-left: 20px;
+	margin-right: 50px;
+}
+img {
+	height: 75px;
+	display: block;
+	margin: 0px auto;
+}
+a:hover{
+	color: grey;
+}
+#narandzast {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+
+	float: right;
+	width: 500px;
+	height:200px;
+}
+table {
+	margin-top: 120px;
+	position: absolute;
+	bottom: 0px;
+
+}
+td {
+	font-size: 17px;
+	border-spacing: 15px;
+	background-color: orange;
+	color: white;
+}
