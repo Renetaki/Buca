@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>formular</title>
+</head>
+<body>
+	<!-- Unutar form taga mi pravimo nas formular -->
+	<form>
+		<!--Fieldset tag koristimo da obuhvatimo neke elemente koji po nama
+		trebaju da imaju slicnu namenu, ovde smo napravili skup licnih podataka
+		nekog korisnika -->
+		<fieldset>
+			<!--Legend tag nam samo predstavlja naslov naseg fieldseta -->
+			<legend>Licni podaci</legend>
+			<!--Label tag trenutno nema nikakvu namenu, samo ga preko atribuda
+			for povezujemo sa nasim input elementom, ovo povezivanje sada samo znaci da kada kliknemo na ime labele na stranici, kursor nam se namesta na nas input element koji je spreman da primi neke podatke koje korisnik unosi -->
+			<label for="imeIPrezime">Ime i prezime:* </label>
+			<!--input tag nam predstavlja unos nekih podataka, moze da ima razlicite tipove, vecinu koje smo demonstrirali u primerima ispod, njegov tip namestamo sa atributom type, mi smo po nekoj konvenciji uzeli i dodelili imena, i id-jeve da budu ista kao i for u nasoj labeli da bi ih povezali -->
+			<input id="imeIPrezime" type="password" name="imeIPrezime">
+			<br>
+			<br>
+			<label for="username">Username:* </label>
+			<input id="username" type="text" name="username">
+			<br>
+			<br>
+			<label for="password">Password:*</label>
+			<input id="password" type="password" name="password">
+			<br>
+			<br>
+			<label for="datumRodjenja">Datum rodjenja: </label>
+			<input id="datumRodjenja" type="date" name="datumRodjenja">
+			<br>
+			<br>
+			<label for="email">Email:* </label>
+			<input id="email" type="email" name="email">
+			<br>
+			<br>
+			<label for="vebStranica">Veb stranica: </label>
+			<input id="vebStranica" type="url" name="vebStranica">
+			<br>
+			<br>
+		</fieldset>
+		<fieldset>
+			<legend>Obrazovanje</legend>	
+			<label for="fakultet">Fakultet:* </label>
+			<!--select tag predstavlja dropdown listu u koju mi ubacujemo optgrupe(podnaslove) i optione(neke elemente koje mozemo da izaberemo)
+			Optioni trebaju da imaju neki atribut value i njegovu vrednost, da bismo kasnije preko JavaScripta vadili te informacije i obradjivali kako mi zelimo, optgrupe imenujemo preko label atributa
+			 -->
+			<select>
+				<optgroup label="tehnicki fakulteti">
+					<option value="ETF">Elektrotehnicki fakultet</option>
+					<option value="">Masinski fakultet</option>
+					<option value="">Gradjevinski fakultet</option>
+					<option value="">Arhitektonski fakultet</option>
+				</optgroup>
+				<optgroup label="umetnicki fakulteti">
+					<option value="">Primenjene umetnosti</option>
+					<option value="">Likovne umetnosti</option>	
+				</optgroup>	
+			</select>
+			<br>
+			<br>
+
+			<label for="univerzitet">Univerzitet: </label>
+			<input id="univerzitet" type="text" name="univerzitet" 
+			list="listaUniverziteta">
+			<!--Slicno select tagu, mozemo da napravimo malu bazu podataka tj izbora za neku dropdown listu preko datalist taga, on isto sadrzi option elemente i mora da ima id da bi se povezao sa nasim input elementom, taj input element mora da ima dodatan atribut list gde je vrednost list atributa bas id od nase dataliste da bi se oni povezali. Ovo takodje omogucava nama da pretrazujemo nasu listu ako navedemo da je tip inputa text! -->
+			<datalist id="listaUniverziteta">
+				<option value="UBG">Univerzitet u Beogradu</option>
+				<option value="UNS">Univerzitet u Novom Sadu</option>
+				<option value="UN">Univerzitet u Nisu</option>
+				<option value="UKG">Univerzitet u Kragujevcu</option>
+			</datalist>
+			<br>
+			<br>
+			<!--Na kraju imamo radio dugmice, poenta radio dugmica je da bude medjusobno ekskluzivan izbor izmedju njih, to postizemo tako sto grupi tih dugmica dodeljujemo isto ime, u ovom slucaju godina, to omogucava da se samo jedan od ova 4 dugmeta moze izabrati, za visestruki izbor koristimo checkbox elemente koje cemo sledeci put raditi -->
+			<label>Godina studija:</label>
+			1 <input value="1" type="radio" name="godina">
+			2 <input value="2" type="radio" name="godina">
+			3 <input value="3" type="radio" name="godina">
+			4 <input value="4" type="radio" name="godina">
+		</fieldset>
+	</form>
+
+</body>
+</html>
+<!--Dodatni komentari:
+	Imamo 2 tipa putanje:
+		- relativnu - ona predstavlja putanju OD MESTA NA KOJEM SE NALAZIMO do mesta koje trazimo
+		npr: (ako se nalazimo vec u F:\probacss\) \css\style.css 
+
+		- apsolutnu - ona predstavlja TACNU putanju OD POCETKA SISTEMA do mesta koje trazimo
+		npr: F:\probacss\css\style.css
+	Moramo pri linkovanju nasih fajlova navesti tacnu lokaciju gde se neki od njih nalazi da bi se pravilno linkovali. Paziti na ekstenzije i imena.
+
+ -->
